@@ -1,0 +1,35 @@
+@import "@fontsource/be-vietnam-pro/vietnamese-400.css";
+@import "@fontsource/be-vietnam-pro/latin-400.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-500.css";
+@import "@fontsource/be-vietnam-pro/latin-500.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-600.css";
+@import "@fontsource/be-vietnam-pro/latin-600.css";
+@import "@fontsource/be-vietnam-pro/vietnamese-700.css";
+@import "@fontsource/be-vietnam-pro/latin-700.css";
+@import "@fontsource/playfair-display/vietnamese-700.css";
+@import "@fontsource/playfair-display/latin-700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-cream font-sans text-[16px] leading-relaxed text-slate-800 antialiased; }
+  h1, h2, h3, h4 { @apply font-sans font-bold text-slate-900; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-brand-500; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .btn { @apply inline-flex min-h-[44px] cursor-pointer items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-[15px] font-semibold transition active:scale-[.98]; }
+  .btn-primary { @apply btn bg-brand-700 text-white hover:bg-brand-600; }
+  .btn-gold { @apply btn bg-gold-500 text-brand-900 hover:bg-gold-400; }
+  .btn-ghost { @apply btn border border-brand-200 bg-white text-brand-800 hover:bg-brand-50; }
+  .btn-danger { @apply btn bg-rose-50 text-rose-700 hover:bg-rose-100; }
+  .input { @apply min-h-[44px] w-full rounded-xl border border-slate-300 bg-white px-3.5 py-2 text-[16px] text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200; }
+  .label { @apply mb-1.5 block text-sm font-semibold text-slate-700; }
+  .card { @apply rounded-2xl border border-slate-200 bg-white shadow-sm; }
+  .section-title { @apply font-display text-3xl font-bold sm:text-4xl; }
+}

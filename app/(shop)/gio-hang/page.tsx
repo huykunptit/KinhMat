@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import Cart from "@/components/Cart";
+export const metadata: Metadata = { title: "Giỏ hàng" };
+export default function Page() { return <Cart />; }
